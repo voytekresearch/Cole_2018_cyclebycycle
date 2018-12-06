@@ -14,10 +14,18 @@ config_sim = {
     'cycle_features': {'amp_std': .2,
                        'period_std': 15,
                        'rdsym_std': .1},
+    'cycle_features_2': {'amp_std': .1,
+                       'period_std': 5,
+                       'rdsym_std': .05},
     'osc_detect_kwargs': {'amplitude_fraction_threshold':0,
                           'amplitude_consistency_threshold':.5,
                           'period_consistency_threshold':.5,
                           'monotonicity_threshold':.8,
+                          'N_cycles_min':3},
+    'osc_detect_kwargs_conservative': {'amplitude_fraction_threshold':0,
+                          'amplitude_consistency_threshold':.6,
+                          'period_consistency_threshold':.6,
+                          'monotonicity_threshold':.9,
                           'N_cycles_min':3}
 
 }
